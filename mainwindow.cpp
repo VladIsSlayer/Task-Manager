@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"          // Сгенерированный Qt файл с описанием интерфейса
+#include "createtaskdialog.h"
 
 MainWindow::MainWindow(QWidget *parent) //конструктор главного окна
     : QMainWindow(parent)               //конструктор родительского класса
@@ -15,7 +16,11 @@ MainWindow::~MainWindow()               //Декструктор
 
 void MainWindow::on_CreateTask_clicked()
 {
+    //создаем экземпляр диалога
+    CreateTaskDialog dialog(this);  //this - родительское окно
 
+    // Показывает диалог модально (блокирует главное окно)
+    dialog.exec();
 }
 
 

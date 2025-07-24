@@ -1,10 +1,26 @@
-#ifndef CREATETASKDIALOG_H          //не понимаю
-#define CREATETASKDIALOG_H          //не понимаю
+#ifndef CREATETASKDIALOG_H
+#define CREATETASKDIALOG_H
 
-class CreateTaskDialog              //Инициализируется класс
+#include <QDialog>
+
+//предварительное объявление сгенерированного UI класса
+namespace Ui{
+class CreateTaskDialog;             //Инициализируется класс
+}
+
+class CreateTaskDialog : public QDialog
 {
-public:                             //обозначает общий доступ
-    CreateTaskDialog();             //пустой конструктор класса?
+
+    Q_OBJECT                    //Макрос для работы с сигналами/слотами
+
+public:
+    explicit CreateTaskDialog(QWidget *parent = nullptr);
+    ~CreateTaskDialog();
+
+
+private:
+    Ui::CreateTaskDialog *ui;        //Указатель на сгенерированный UI
+
 };
 
-#endif // CREATETASKDIALOG_H        //не понимаю
+#endif // CREATETASKDIALOG_H
