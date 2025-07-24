@@ -11,6 +11,8 @@ qt_add_executable(TaskManager
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    CreateTaskDialog.ui
+    createtaskdialog.h createtaskdialog.cpp
 )
 
 target_link_libraries(TaskManager
